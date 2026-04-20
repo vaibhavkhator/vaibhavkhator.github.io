@@ -1,42 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Vaibhav Khator - Resume</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 40px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhav Khator | Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+    }
+
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #2563eb, #9333ea);
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 1.1rem;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 12px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+        border-left: 4px solid #3b82f6;
+        padding-left: 10px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: #2563eb;
+        border-radius: 6px;
+        color: white;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #1d4ed8;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        opacity: 0.6;
+    }
+</style>
 </head>
+
 <body>
 
-<h1>Vaibhav Khator</h1>
-<p><b>Email:</b> your@email.com</p>
-<p><b>LinkedIn:</b> your-linkedin</p>
+<header>
+    <h1>Vaibhav Khator</h1>
+    <p>Aspiring Developer | Data Enthusiast</p>
+    <p>
+        <a href="https://linkedin.com/in/vaibhavxkhator">LinkedIn</a> |
+        <a href="https://github.com/vaibhavkhator">GitHub</a>
+    </p>
+</header>
 
-<h2>About Me</h2>
-<p>A passionate student interested in tech and development.</p>
+<div class="container">
 
-<h2>Skills</h2>
-<ul>
-<li>Python</li>
-<li>SQL</li>
-<li>Power BI</li>
-</ul>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I am a passionate student interested in software development, data analytics, and building real-world projects using modern technologies.</p>
+    </div>
 
-<h2>Projects</h2>
-<ul>
-<li>Dashboard Project</li>
-<li>AI-based Project</li>
-</ul>
+    <div class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+            <li>HTML, CSS</li>
+        </ul>
+    </div>
 
-<h2>Resume</h2>
-<p><a href="resume.pdf">Download My Resume</a></p>
+    <div class="card">
+        <h2>Projects</h2>
+        <ul>
+            <li><b>Power BI Dashboard:</b> Created interactive business dashboards</li>
+            <li><b>AI Project:</b> Built using Gemini AI tools</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Education</h2>
+        <p>Bachelor’s Degree </p>
+    </div>
+
+    <div class="card">
+        <h2>Resume</h2>
+        <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+    </div>
+
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: khatorvaibhav22@gmailcom.com</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Vaibhav Khator
+</footer>
 
 </body>
 </html>
