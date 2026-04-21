@@ -74,7 +74,3 @@ Users can visit the site to:
   * **Email:** khatorvaibhav22@gmail.com
   * **LinkedIn:** [linkedin.com/in/vaibhavxkhator/](https://www.linkedin.com/in/vaibhavxkhator/)
   * **GitHub:** [github.com/vaibhavkhator](https://github.com/vaibhavkhator)
-
-## 📄 License
-
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/). Feel free to use the code as inspiration for your own portfolio\!
