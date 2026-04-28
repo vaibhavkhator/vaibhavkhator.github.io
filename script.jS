@@ -1,3 +1,4 @@
+console.log("SCRIPT LOADED");
 // Navbar
 const navbar = document.getElementById('navbar');
 const sections = document.querySelectorAll('section');
