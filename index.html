@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+</script>
 </head>
 
 <body>
@@ -152,11 +154,11 @@ MCA (AI & ML) student with a BCA from IEM Kolkata. Experienced in data managemen
 <p><i class="fas fa-map-marker-alt"></i> Kolkata / Chandigarh</p>
 </div>
 
-<form action="https://formspree.io/f/your-id" method="POST" class="contact-form glass">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Message"></textarea>
-<button class="btn btn-primary">Send</button>
+<form id="contact-form" class="contact-form glass">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button class="btn btn-primary">Send</button>
 </form>
 
 </div>
