@@ -231,9 +231,9 @@ button, a {
 }
 /* Center contact section */
 .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 .contact-wrapper .glass {
