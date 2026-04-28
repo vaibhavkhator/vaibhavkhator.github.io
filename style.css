@@ -1,4 +1,3 @@
-/* style.css */
 :root {
     --bg-color: #0f172a;
     --bg-alt: #1e293b;
@@ -68,10 +67,6 @@ ul {
     padding: 2rem;
 }
 
-.card-hover:hover {
-    transform: translateY(-5px);
-}
-
 /* Buttons */
 .btn {
     display: inline-block;
@@ -98,10 +93,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-nav.scrolled {
-    background: rgba(15, 23, 42, 0.9);
 }
 
 .nav-links {
@@ -157,7 +148,7 @@ footer {
     padding: 2rem;
 }
 
-/* Animations */
+/* Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -167,18 +158,17 @@ footer {
     opacity: 1;
 }
 
-/* ===== RESPONSIVE ===== */
+/* Responsive (ORIGINAL ONLY) */
+@media (max-width: 992px) {
+    .hero h1 { font-size: 3rem; }
+    .contact-wrapper { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 768px) {
-
-    nav {
-        padding: 1rem;
-    }
-
     .nav-links {
         position: fixed;
         right: -100%;
-        top: 60px;
+        top: 70px;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -192,58 +182,7 @@ footer {
         display: block;
     }
 
-    .hero {
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
     .hero-buttons {
         flex-direction: column;
     }
-
-    .section-padding {
-        padding: 3rem 1rem;
-    }
-
-    .skills-grid,
-    .projects-grid,
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .btn {
-        width: 100%;
-    }
-}
-
-/* Mobile polish */
-button, a {
-    -webkit-tap-highlight-color: transparent;
-}
-
-.hero-content {
-    max-width: 600px;
-    margin: auto;
-}
-/* Contact Section */
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.info-item i {
-    color: var(--accent);
-    font-size: 1.2rem;
 }
