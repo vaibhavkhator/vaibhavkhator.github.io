@@ -69,9 +69,11 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Select elements to animate
-document.querySelectorAll('.glass, .section-title, .hero-content').forEach(el => {
-    el.classList.add('fade-in');
-    observer.observe(el);
+window.addEventListener('load', () => {
+    document.querySelectorAll('.glass, .section-title, .hero-content').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
 });
 
 // Form submission prevention (UI only)
