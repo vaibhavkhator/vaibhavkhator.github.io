@@ -247,3 +247,6 @@ button, a {
     align-items: center;
     gap: 10px;
 }
+.contact-wrapper .btn {
+    margin: 10px 5px 0;
+}
