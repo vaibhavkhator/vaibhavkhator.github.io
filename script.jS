@@ -33,6 +33,6 @@ hamburger.addEventListener('click', () => {
 
 // Form
 document.querySelector('.contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
+    <form action="https://formspree.io/f/mvzdjlro" method="POST" class="contact-form glass">
     alert("Message Sent ✅");
 });
