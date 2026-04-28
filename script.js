@@ -1,18 +1,22 @@
-// Progress bar
+// Scroll progress
 window.addEventListener("scroll", () => {
     let scroll = document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     document.getElementById("progress-bar").style.width = (scroll/height)*100 + "%";
 });
 
-// Fade animation
+// Reveal animation
 const observer = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-        if(e.isIntersecting){
-            e.target.style.opacity = 1;
-            e.target.style.transform = "translateY(0)";
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
         }
     });
 });
 
-document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+// Mobile menu
+document.querySelector(".hamburger").addEventListener("click", ()=>{
+    document.querySelector(".nav-links").classList.toggle("active");
+});
