@@ -1,59 +1,100 @@
 :root {
     --bg: #0b0f19;
+    --bg-alt: #111827;
     --text: #e5e7eb;
     --muted: #9ca3af;
     --accent: #3b82f6;
 }
 
-body {
+/* RESET */
+* {
     margin: 0;
-    font-family: Poppins;
-    background: var(--bg);
-    color: var(--text);
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Progress bar */
+body {
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* PROGRESS BAR */
 #progress-bar {
     position: fixed;
     top: 0;
+    left: 0;
     height: 3px;
-    background: var(--accent);
     width: 0%;
+    background: var(--accent);
     z-index: 9999;
 }
 
-/* Navbar */
+/* NAVBAR */
 nav {
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+/* NAV LINKS FIX */
 .nav-links {
     display: flex;
     gap: 2rem;
+    list-style: none;
 }
 
-.logo span { color: var(--accent); }
+.nav-links li {
+    list-style: none;
+}
 
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* HAMBURGER */
 .hamburger {
     display: none;
+    font-size: 1.5rem;
 }
 
-/* Hero */
+/* HERO */
 .hero {
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding-top: 80px;
     text-align: center;
 }
 
 .hero h1 {
     font-size: 3.5rem;
+    line-height: 1.2;
 }
 
 .hero h1 span {
@@ -62,27 +103,51 @@ nav {
 
 .hero p {
     color: var(--muted);
+    margin: 1rem 0 2rem;
 }
 
-/* Buttons */
+.subtitle {
+    color: var(--accent);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* BUTTONS */
 .btn {
     padding: 10px 25px;
     border-radius: 30px;
     margin: 5px;
+    transition: 0.3s;
+    display: inline-block;
 }
 
 .btn-primary {
     background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     border: 1px solid var(--accent);
+    color: var(--text);
 }
 
-/* Sections */
+.btn-secondary:hover {
+    background: var(--accent);
+}
+
+/* SECTIONS */
 .section {
     padding: 100px 10%;
     text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .center-text {
@@ -91,19 +156,20 @@ nav {
     color: var(--muted);
 }
 
-/* Grid */
+/* GRID */
 .grid {
     display: grid;
     gap: 30px;
     margin-top: 40px;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Cards */
+/* CARDS */
 .card {
     padding: 40px;
     border-radius: 20px;
     background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(10px);
     transition: 0.4s;
 }
 
@@ -111,21 +177,33 @@ nav {
     transform: translateY(-10px);
 }
 
-/* Contact */
+/* CONTACT */
 .contact-box {
     padding: 30px;
     border-radius: 15px;
     background: rgba(255,255,255,0.05);
+    margin-top: 20px;
 }
 
-/* Footer */
+/* SOCIAL ICONS */
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: var(--muted);
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+}
+
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
     color: var(--muted);
 }
 
-/* Animation */
+/* ANIMATION */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -137,9 +215,39 @@ footer {
     transform: translateY(0);
 }
 
-/* Mobile */
-@media(max-width:768px){
-    .nav-links { display: none; }
-    .hamburger { display: block; }
-    .hero h1 { font-size: 2rem; }
+/* MOBILE */
+@media(max-width: 768px) {
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        background: var(--bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
