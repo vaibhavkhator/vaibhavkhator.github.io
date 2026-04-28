@@ -229,3 +229,21 @@ button, a {
     max-width: 600px;
     margin: auto;
 }
+/* Center contact section */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper .glass {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+.contact-wrapper p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
