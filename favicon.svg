@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="32" height="32" rx="4" fill="#0a0b0d"/>
+  <text x="2" y="23" font-family="'Space Grotesk', monospace" font-weight="700" font-size="17" fill="#ffffff">vk</text>
+</svg>
